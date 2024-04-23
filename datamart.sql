@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS "datamart";
+
+CREATE DATABASE "datamart";
