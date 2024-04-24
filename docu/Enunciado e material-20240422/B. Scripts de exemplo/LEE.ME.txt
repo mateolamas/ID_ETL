@@ -1,0 +1,15 @@
+Estes son os ficheiros cos scripts que utilicei no meu exemplo de clase.
+
+Deixoos aquí dispoñíbeis por se queredes tomalos como referencia para facer algo parecido na vosa práctica. 
+A mín resultoume moito cómoda esta organización para facer as probas da miña implementación.
+
+NOTA: OS scripts NON CREAN as bases de datos. Eu fixen o seguinte:
+
+1) Creei as BDs a man. 
+2) executei cada script na BD correspondente
+
+Os scripts fan o seguinte:
+Script 1)  Crea as táboas necesarias (baleiras) na BD do Datamart (se xa existían, elimina as anteriores) 
+Script 2)  Crea as táboas necesarias (baleiras) na BD operacional (se xa existían, elimina as anteriores) 
+Script 3)  Simula os cambios producidos na BD durante o mes de xaneiro (altas) 
+Script 4)  Simula os cambios producidos na BD durante o mes de febreiro (altas +  modificacions)
