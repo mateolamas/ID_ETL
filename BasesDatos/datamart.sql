@@ -49,10 +49,10 @@ ALTER TABLE ONLY public.fact_practicas
     ADD CONSTRAINT practicas_dia_fk FOREIGN KEY (id_dia) REFERENCES public.dim_dia(id_dia);
 
 
-INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (10022016, 10, 'miercoles', 'febrero', 2, 2016);
-INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (11022016, 11, 'jueves', 'febrero', 2, 2016);
-INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (12022016, 12, 'viernes', 'febrero', 2, 2016);
-INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (16012019, 16, 'miercoles', 'enero', 1, 2019);
-INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (12032021, 12, 'viernes', 'marzo', 3, 2021);
+INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (20160210, 10, 'miercoles', 'febrero', 2, 2016);
+INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (20160211, 11, 'jueves', 'febrero', 2, 2016);
+INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (20160212, 12, 'viernes', 'febrero', 2, 2016);
+INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (20190116, 16, 'miercoles', 'enero', 1, 2019);
+INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (20210312, 12, 'viernes', 'marzo', 3, 2021);
 
 
