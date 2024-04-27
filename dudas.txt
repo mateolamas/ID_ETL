@@ -1,0 +1,13 @@
+si queremos usar el CDC columnas de auditoría(Indicador de estado) tenemos que representar
+la columna "estado" en el diagrama de la bd?
+
+
+tarea B
+MOI IMPORTANTE: o teu método CDC debe permitir SEGREGAR as filas novas e as filas 
+modificadas,  que  serán  procesadas  POR  SEPARADO  na  túa  transformación.  Se  non  o  
+fas así, esta tarefa non será avaliada.
+que significa eso
+
+en TareaC
+en input table
+ponemos el dia en el que está el equipo o una fecha a mano
