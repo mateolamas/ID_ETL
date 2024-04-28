@@ -8,6 +8,7 @@ modificadas,  que  serán  procesadas  POR  SEPARADO  na  túa  transformación.
 fas así, esta tarefa non será avaliada.
 que significa eso
 
+//APARENTEMENTE SOLUCIONADA
 en TareaC
 en input table
 ponemos el dia en el que está el equipo o una fecha a mano
