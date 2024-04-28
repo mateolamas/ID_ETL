@@ -435,11 +435,14 @@
   </info>
   <notepads>
     <notepad>
-      <note>Para el CDC usaremos la opción de columnas de auditoría, en concreto indicador de estado -> alumno.estado ( I | U )</note>
-      <xloc>80</xloc>
-      <yloc>304</yloc>
-      <width>785</width>
-      <heigth>30</heigth>
+      <note>Tarea B: transformación para cargar en el datamart la dimension de alumnos
+	
+- Estrategia insert else update (IeU) y con actualización SCD 1 de Kimball
+- Para el CDC usaremos la opción de columnas de auditoría, en concreto indicador de estado -> alumno.estado ( I | U )</note>
+      <xloc>112</xloc>
+      <yloc>240</yloc>
+      <width>795</width>
+      <heigth>90</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -561,11 +564,11 @@
   <order>
     <hop>
       <from>Table input alumno</from>
-      <to>Execute SQL script</to>
+      <to>Execute SQL script (estado = NULL)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script</from>
+      <from>Execute SQL script (estado = NULL)</from>
       <to>Combination lookup/update</to>
       <enabled>Y</enabled>
     </hop>
@@ -623,7 +626,7 @@
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script</name>
+    <name>Execute SQL script (estado = NULL)</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
