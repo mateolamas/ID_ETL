@@ -28,6 +28,7 @@ CREATE TABLE public.alumno (
     fecha_nacimiento date NOT NULL,
     direccion character varying(50) NOT NULL,
     email character varying(40) NOT NULL,
+    renta numeric(7) NOT NULL,
     estado estado_cdc
 );
 
@@ -81,10 +82,10 @@ INSERT INTO public.profesor (nif, nombre, apellidos, telefono, direccion, salari
 INSERT INTO public.profesor (nif, nombre, apellidos, telefono, direccion, salario, estado) VALUES ('23342942N', 'Rosana', 'Tural', 911827644, 'Avenida 1 numero 16 Pontevedra', 1600, 'I');
 INSERT INTO public.profesor (nif, nombre, apellidos, telefono, direccion, salario, estado) VALUES ('79212312L', 'Manolo', 'Rodriguez', 655312321, 'Rua 3 numero 2 Moana Pontevedra', 1800, 'I');
 
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, estado) VALUES ('32543432W', 'Manuel', 'Ameal', '2000-01-05', 'Torre de Abaixo numero 2 A Coruna', 'manuel.ameal@correo.com', 'I');
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, estado) VALUES ('45984511U', 'Ursula', 'Ozores', '1996-05-07', 'Rua 8 numero 6 A Coruna', 'ursula.ozores@correo.com', 'I');
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, estado) VALUES ('84214356X', 'Tania', 'Diz', '2002-09-03', 'Torre de Arriba numero 2 Pontevedra', 'tania.diz@correo.com', 'I');
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, estado) VALUES ('92342123O', 'Mateo', 'Johnson', '1999-09-03', 'Torre de Abaixo numero 2 Lugo', 'mateo.johnson@correo.com', 'I');
+INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('32543432W', 'Manuel', 'Ameal', '2000-01-05', 'Torre de Abaixo numero 2 A Coruna', 'manuel.ameal@correo.com', 30000 , 'I');
+INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('45984511U', 'Ursula', 'Ozores', '1996-05-07', 'Rua 8 numero 6 A Coruna', 'ursula.ozores@correo.com', 22000, 'I');
+INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('84214356X', 'Tania', 'Diz', '2002-09-03', 'Torre de Arriba numero 2 Pontevedra', 'tania.diz@correo.com', 12000,'I');
+INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('92342123O', 'Mateo', 'Johnson', '1999-09-03', 'Torre de Abaixo numero 2 Lugo', 'mateo.johnson@correo.com', 100000, 'I');
 
 INSERT INTO public.vehiculo (matricula, fecha_adquisicion, modelo, num_asientos) VALUES ('1343DFF', '2015-02-09', 'Audi Q7', 5);
 INSERT INTO public.vehiculo (matricula, fecha_adquisicion, modelo, num_asientos) VALUES ('7654FGS', '2018-06-11', 'Kia Ceed', 5);

@@ -11,3 +11,6 @@ que significa eso
 en TareaC
 en input table
 ponemos el dia en el que está el equipo o una fecha a mano
+
+en TareaD
+añade una fila con todo en NULL con id_alumno = 0 e id_version = 1

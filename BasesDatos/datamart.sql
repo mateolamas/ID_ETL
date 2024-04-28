@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS public.fact_practicas;
+DROP TABLE IF EXISTS public.dim_alumnos_scd2;
 DROP TABLE IF EXISTS public.dim_alumnos;
 DROP TABLE IF EXISTS public.dim_profesores;
 DROP TABLE IF EXISTS public.dim_dia;
@@ -8,12 +9,13 @@ CREATE TABLE public.dim_alumnos (
     dni character varying(9) NOT NULL,
     nombre character varying(25),
     apellidos character varying(50),
-    fecha_nacimiento date
+    fecha_nacimiento date,
+    renta numeric(7)
 );  
 
 CREATE TABLE public.dim_profesores (
     id_profesor numeric(6) PRIMARY KEY,
-    dni character varying(9) NOT NULL,
+    dni character varying(9),
     nombre character varying(25),
     apellidos character varying(50),
     fecha_contratacion date
@@ -56,3 +58,17 @@ INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALU
 INSERT INTO public.dim_dia (id_dia, num_dia, nombre_dia, mes, num_mes, ano) VALUES (20210312, 12, 'viernes', 'marzo', 3, 2021);
 
 
+-------- TAREA D ---------------
+
+CREATE TABLE public.dim_alumnos_scd2 (
+    id_alumno numeric(6) PRIMARY KEY,
+    dni character varying(9),
+    nombre character varying(25),
+    apellidos character varying(50),
+    fecha_nacimiento date,
+    renta numeric(7),
+    valido_desde timestamp without time zone,
+    valido_ate timestamp without time zone,
+    num_version numeric(3,0),
+    version_actual boolean
+);
