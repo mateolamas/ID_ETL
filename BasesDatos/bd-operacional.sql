@@ -77,16 +77,6 @@ ALTER TABLE ONLY public.practica
 --
 -- INSERT SECTION
 --
-
-INSERT INTO public.profesor (nif, nombre, apellidos, telefono, direccion, salario, estado) VALUES ('74924381B', 'Francisco', 'Corico', 975234187, 'Avenida 3 numero 4 A Coruna', 1500, 'I');
-INSERT INTO public.profesor (nif, nombre, apellidos, telefono, direccion, salario, estado) VALUES ('23342942N', 'Rosana', 'Tural', 911827644, 'Avenida 1 numero 16 Pontevedra', 1600, 'I');
-INSERT INTO public.profesor (nif, nombre, apellidos, telefono, direccion, salario, estado) VALUES ('79212312L', 'Manolo', 'Rodriguez', 655312321, 'Rua 3 numero 2 Moana Pontevedra', 1800, 'I');
-
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('32543432W', 'Manuel', 'Ameal', '2000-01-05', 'Torre de Abaixo numero 2 A Coruna', 'manuel.ameal@correo.com', 30000 , 'I');
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('45984511U', 'Ursula', 'Ozores', '1996-05-07', 'Rua 8 numero 6 A Coruna', 'ursula.ozores@correo.com', 22000, 'I');
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('84214356X', 'Tania', 'Diz', '2002-09-03', 'Torre de Arriba numero 2 Pontevedra', 'tania.diz@correo.com', 12000,'I');
-INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('92342123O', 'Mateo', 'Johnson', '1999-09-03', 'Torre de Abaixo numero 2 Lugo', 'mateo.johnson@correo.com', 100000, 'I');
-
 INSERT INTO public.vehiculo (matricula, fecha_adquisicion, modelo, num_asientos) VALUES ('1343DFF', '2015-02-09', 'Audi Q7', 5);
 INSERT INTO public.vehiculo (matricula, fecha_adquisicion, modelo, num_asientos) VALUES ('7654FGS', '2018-06-11', 'Kia Ceed', 5);
 INSERT INTO public.vehiculo (matricula, fecha_adquisicion, modelo, num_asientos) VALUES ('2643LPS', '2020-10-12', 'RS 660 2020', 2);
@@ -96,11 +86,5 @@ INSERT INTO public.registro_mecanico (cod_registro, taller, descripcion, precio,
 INSERT INTO public.registro_mecanico (cod_registro, taller, descripcion, precio, fecha_registro, matricula_vehiculo) VALUES ('2', 'Talleres Manolo', 'Cambio de frenos', 72.05, '2017-02-12', '1343DFF');
 INSERT INTO public.registro_mecanico (cod_registro, taller, descripcion, precio, fecha_registro, matricula_vehiculo) VALUES ('3', 'Talleres Picado', 'Cambio de aceite', 49.50, '2019-01-11', '7654FGS');
 
-INSERT INTO public.practica (cod_practica, fecha_practica, precio, tipo_pago, nif_alumno, nif_profesor, matricula_vehiculo, tiempo, tipo_permiso) VALUES ('1', '2016-02-10', 21.50, 'Metalico', '84214356X', '74924381B', '1343DFF', 45, 'B');
-INSERT INTO public.practica (cod_practica, fecha_practica, precio, tipo_pago, nif_alumno, nif_profesor, matricula_vehiculo, tiempo, tipo_permiso) VALUES ('2', '2016-02-11', 48.00, 'Metalico', '84214356X', '74924381B', '1343DFF', 90, 'B');
-INSERT INTO public.practica (cod_practica, fecha_practica, precio, tipo_pago, nif_alumno, nif_profesor, matricula_vehiculo, tiempo, tipo_permiso) VALUES ('3', '2016-02-12', 30.00, 'Metalico', '84214356X', '74924381B', '1343DFF', 60, 'B');
-INSERT INTO public.practica (cod_practica, fecha_practica, precio, tipo_pago, nif_alumno, nif_profesor, matricula_vehiculo, tiempo, tipo_permiso) VALUES ('4', '2019-01-16', 50.00, 'Tarjeta', '45984511U', '74924381B', '7654FGS', 95, 'B');
-INSERT INTO public.practica (cod_practica, fecha_practica, precio, tipo_pago, nif_alumno, nif_profesor, matricula_vehiculo, tiempo, tipo_permiso) VALUES ('5', '2021-03-12', 66.95, 'Metalico', '92342123O', '23342942N', '2643LPS', 120, 'A1');
-INSERT INTO public.practica (cod_practica, fecha_practica, precio, tipo_pago, nif_alumno, nif_profesor, matricula_vehiculo, tiempo, tipo_permiso) VALUES ('6', '2021-01-28', 90.95, 'Tarjeta', '45984511U', '23342942N', '4522DFW', 90, 'C');
 
 
