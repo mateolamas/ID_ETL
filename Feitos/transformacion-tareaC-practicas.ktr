@@ -11,7 +11,7 @@
     <parameters>
       <parameter>
         <name>fecha_ejecucion_etl</name>
-        <default_value>'2016-02-10'</default_value>
+        <default_value>'2024-04-01'</default_value>
         <description>Variable que controla la fecha de ejecución del ETL</description>
       </parameter>
     </parameters>
