@@ -8,11 +8,10 @@ UPDATE public.profesor SET apellidos='APELLIDO NUEVO PROFESOR', estado = 'U' WHE
 
 
 
-
-
 -- Añadimos un nuevo alumno
 INSERT INTO public.alumno (nif, nombre, apellidos, fecha_nacimiento, direccion, email, renta, estado) VALUES ('32543432W', 'Manuel', 'Ameal', '2000-01-05', 'Torre de Abaixo numero 2 A Coruna', 'manuel.ameal@correo.com', 30000 , 'I');
-
+-- Modificamos el alumno que acabamos de insertar por lo que no modificamos el estado (estado = 'I')
+UPDATE public.alumno SET nombre='NOMBRE ALUMNO CREADO' WHERE nif='32543432W';
 
 -- Actualizamos la direccion de un alumno para probar el 'punch through'
 UPDATE public.alumno SET apellidos='APELLIDO NUEVO ALUMNO', estado = 'U' WHERE nif='84214356X';
@@ -22,11 +21,6 @@ UPDATE public.alumno SET renta=40000, estado = 'U' WHERE nif='92342123O';
 
 -- Actualizamos direccion de un alumno (no influye en nada porque la direccion no se sube al datamart)
 UPDATE public.alumno SET direccion='DIRECCION NUEVO ALUMNO', estado = 'U' WHERE nif='45984511U';
-
--- Actualizamos el nombre ('punch through') y actualizamos tambien la renta('insert')
--- de un mismo alumno a la vez
-UPDATE public.alumno SET nombre='NOMBRE NUEVO ALUMNO', estado = 'U' WHERE nif='45984511U';
-UPDATE public.alumno SET renta=30000, estado = 'U' WHERE nif='45984511U';
 
 
 
