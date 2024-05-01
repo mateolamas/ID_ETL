@@ -439,8 +439,8 @@
 	
 - Estrategia insert else update (IeU) y con actualización SCD 1 de Kimball
 - Para el CDC usaremos la opción de columnas de auditoría, en concreto indicador de estado -> profesor.estado ( I | U )</note>
-      <xloc>480</xloc>
-      <yloc>672</yloc>
+      <xloc>512</xloc>
+      <yloc>592</yloc>
       <width>801</width>
       <heigth>90</heigth>
       <fontname>Segoe UI</fontname>
@@ -1134,120 +1134,6 @@ WHERE estado = 'U';
     </GUI>
   </step>
   <step>
-    <name>Update</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>conexion_datamart</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>1</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>N</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>dim_profesores</table>
-      <key>
-        <name>id_profesor</name>
-        <field>id_profesor</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>dni</name>
-        <rename>nif</rename>
-      </value>
-      <value>
-        <name>nombre</name>
-        <rename>nombre</rename>
-      </value>
-      <value>
-        <name>apellidos</name>
-        <rename>apellidos</rename>
-      </value>
-      <value>
-        <name>fecha_contratacion</name>
-        <rename>alta_contratacion</rename>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1072</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Update 2</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>conexion_datamart</connection>
-    <skip_lookup>N</skip_lookup>
-    <commit>1</commit>
-    <use_batch>N</use_batch>
-    <error_ignored>N</error_ignored>
-    <ignore_flag_field/>
-    <lookup>
-      <schema/>
-      <table>dim_profesores</table>
-      <key>
-        <name>id_profesor</name>
-        <field>id_profesor</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>dni</name>
-        <rename>nif</rename>
-      </value>
-      <value>
-        <name>nombre</name>
-        <rename>nombre</rename>
-      </value>
-      <value>
-        <name>apellidos</name>
-        <rename>apellidos</rename>
-      </value>
-      <value>
-        <name>fecha_contratacion</name>
-        <rename>alta_contratacion</rename>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1072</xloc>
-      <yloc>512</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Text file input</name>
     <type>TextFileInput</type>
     <description/>
@@ -1286,7 +1172,7 @@ WHERE estado = 'U';
     <length>Characters</length>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:/Users/MSI/IdeaProjects/ID_ETL/Dimensions/fechas-contratacion.csv</name>
+      <name>${Internal.Entry.Current.Directory}/fechas-contratacion.csv</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1406,7 +1292,7 @@ WHERE estado = 'U';
     <length>Characters</length>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:/Users/MSI/IdeaProjects/ID_ETL/Dimensions/fechas-contratacion.csv</name>
+      <name>${Internal.Entry.Current.Directory}/fechas-contratacion.csv</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1484,6 +1370,120 @@ WHERE estado = 'U';
     <GUI>
       <xloc>256</xloc>
       <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>conexion_datamart</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>1</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>dim_profesores</table>
+      <key>
+        <name>id_profesor</name>
+        <field>id_profesor</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>dni</name>
+        <rename>nif</rename>
+      </value>
+      <value>
+        <name>nombre</name>
+        <rename>nombre</rename>
+      </value>
+      <value>
+        <name>apellidos</name>
+        <rename>apellidos</rename>
+      </value>
+      <value>
+        <name>fecha_contratacion</name>
+        <rename>alta_contratacion</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update 2</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>conexion_datamart</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>1</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>dim_profesores</table>
+      <key>
+        <name>id_profesor</name>
+        <field>id_profesor</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>dni</name>
+        <rename>nif</rename>
+      </value>
+      <value>
+        <name>nombre</name>
+        <rename>nombre</rename>
+      </value>
+      <value>
+        <name>apellidos</name>
+        <rename>apellidos</rename>
+      </value>
+      <value>
+        <name>fecha_contratacion</name>
+        <rename>alta_contratacion</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
